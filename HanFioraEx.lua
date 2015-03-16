@@ -20,7 +20,7 @@ function ScriptUpdate:__init(LocalVersion, Host, VersionPath, ScriptPath, SavePa
 end
 
 function ScriptUpdate:OnDraw()
-    DrawText('Download Status: '..(self.DownloadStatus or 'Unknown'),50,10,50,ARGB(0xFF,0xFF,0xFF,0xFF))
+--    DrawText('Download Status: '..(self.DownloadStatus or 'Unknown'),50,10,50,ARGB(0xFF,0xFF,0xFF,0xFF))
 end
 
 function ScriptUpdate:CreateSocket(url)
@@ -451,7 +451,7 @@ function OnLoad()
     if VIP_USER then HookPackets() end
 
     local ToUpdate = {}
-    ToUpdate.Version = 1.01
+    ToUpdate.Version = 1.02
     ToUpdate.Host = "raw.githubusercontent.com"
     ToUpdate.VersionPath = "/Superx321/han/master/HanFioraEx.Version"
     ToUpdate.ScriptPath =  "/Superx321/han/master/HanFioraEx.lua"
