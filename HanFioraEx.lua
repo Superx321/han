@@ -64,7 +64,7 @@ function ScriptUpdate:GetOnlineVersion()
     end
 
     self.File = self.File .. (self.Receive or self.Snipped)
-    if self.File:find('</size>') then
+    if self.File:find('</s'..'ize>') then
         if not self.Size then
             self.Size = tonumber(self.File:sub(self.File:find('<si'..'ze>')+6,self.File:find('</s'..'ize>')-1)) + self.File:len()
         end
@@ -451,7 +451,7 @@ function OnLoad()
     if VIP_USER then HookPackets() end
 
     local ToUpdate = {}
-    ToUpdate.Version = 1.02
+    ToUpdate.Version = 1.03
     ToUpdate.Host = "raw.githubusercontent.com"
     ToUpdate.VersionPath = "/Superx321/han/master/HanFioraEx.Version"
     ToUpdate.ScriptPath =  "/Superx321/han/master/HanFioraEx.lua"
